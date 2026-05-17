@@ -5,14 +5,13 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import styles from './Skills.module.scss';
 
-const SkillsGraph2D = dynamic(
-  () => import('@/components/canvas/SkillsGraph2D').then(m => m.SkillsGraph2D),
+const SkillsFlow = dynamic(
+  () => import('@/components/canvas/SkillsFlow').then(m => m.SkillsFlow),
   { ssr: false }
 );
 
 export function Skills() {
   const t = useTranslations('skills');
-  const categories = t.raw('categories') as Array<{ label: string; items: string[] }>;
 
   return (
     <section id="skills" className={styles.section}>
@@ -35,7 +34,7 @@ export function Skills() {
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
-          <SkillsGraph2D categories={categories} />
+          <SkillsFlow />
         </motion.div>
       </div>
     </section>

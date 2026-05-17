@@ -153,7 +153,7 @@ export function SkillsGraph2D({ categories }: { categories: Category[] }) {
         }
 
         const color    = COLORS[node.catIndex];
-        const iconSize = node.isHub ? 28 : 20;
+        const iconSize = node.isHub ? 44 : 32;
         const radius   = node.isHub ? 22 : 16;
 
         // Glow
