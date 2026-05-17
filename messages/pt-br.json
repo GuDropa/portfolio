@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "experience": "Experiência",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "education": "Formação",
+    "contact": "Contato"
+  },
+  "hero": {
+    "greeting": "Olá, eu sou",
+    "name": "Gustavo Dropa",
+    "title": "Desenvolvedor Fullstack",
+    "subtitle": "Co-fundador da FiqOn · Vue.js · TypeScript · Node.js",
+    "cta_github": "Ver GitHub",
+    "cta_contact": "Entrar em contato",
+    "cta_cv": "Download CV"
+  },
+  "about": {
+    "title": "Sobre mim",
+    "text": "Desenvolvedor Fullstack com mais de 4 anos de experiência e co-fundador da startup FiqOn, especializado em Vue.js, TypeScript e Node.js. Tenho experiência em liderança de equipes de produto, melhoria de usabilidade e implementação de microsserviços escaláveis. Proficiente em metodologias ágeis e gestão de projetos, com foco contínuo em performance, acessibilidade e experiência do usuário."
+  },
+  "experience": {
+    "title": "Experiência",
+    "present": "Atualmente",
+    "roles": [
+      {
+        "title": "Desenvolvedor Front-End Pleno",
+        "company": "Myrp",
+        "location": "Blumenau, SC",
+        "period": "Out 2024 – Atualmente",
+        "team": "Time de Desenvolvimento Enterprise",
+        "bullets": [
+          "Desenvolvimento de serviços Micro Frontend em Vue (versões 2 e 3).",
+          "Manutenção e novas funcionalidades de sistemas legados em CSHTML, JQuery, Knockout e Vanilla JS.",
+          "Contato recorrente com o time de produto para alinhamento assertivo de demandas Enterprise.",
+          "Metodologia Scrum com alinhamentos semanais e reuniões diárias."
+        ]
+      },
+      {
+        "title": "Dev Front-End Pleno · Co-Founder",
+        "company": "FiqOn",
+        "location": "Ponta Grossa, PR",
+        "period": "Mar 2024 – Out 2024",
+        "team": "Time de Desenvolvimento",
+        "bullets": [
+          "Desenvolvimento de SPAs em Vue 3 com TypeScript, SASS e Vuetify.",
+          "Consumo de APIs REST, WebSocket e gerenciamento de estados com Pinia.",
+          "Desenvolvimento backend com Laravel e Go, usando RabbitMQ, Elasticsearch, MySQL, MongoDB, Docker e GCP.",
+          "Participação em validações técnicas e definição de prazos/metas."
+        ]
+      },
+      {
+        "title": "Head de Produto",
+        "company": "FiqOn",
+        "location": "Ponta Grossa, PR",
+        "period": "Fev 2023 – Mar 2024",
+        "team": "Time de Produto",
+        "bullets": [
+          "Planejamento da refatoração da plataforma com foco em usabilidade e estratégia PLG.",
+          "Estudo de concorrentes e levantamento de requisitos com empresas americanas (inglês avançado).",
+          "Colaboração com times internacionais para identificar tendências de mercado.",
+          "Aumento de 40% na velocidade de desenvolvimento ao ajustar a metodologia ágil."
+        ]
+      },
+      {
+        "title": "Desenvolvedor Front-End",
+        "company": "FiqOn",
+        "location": "Ponta Grossa, PR",
+        "period": "Set 2021 – Fev 2023",
+        "team": "Time de Desenvolvimento",
+        "bullets": [
+          "Co-Fundador: planejei e desenvolvi a estrutura inicial do front da plataforma de integração.",
+          "Desenvolvimento em Vue 2 e JavaScript com Bootstrap e SASS.",
+          "Participação no time fundador da startup, que recebeu aporte de R$3 milhões via investidor anjo."
+        ]
+      },
+      {
+        "title": "Desenvolvedor Fullstack",
+        "company": "Finer",
+        "location": "Ponta Grossa, PR",
+        "period": "Mar 2021 – Set 2021",
+        "team": "Time de projetos personalizados",
+        "bullets": [
+          "Desenvolvimento fullstack com PHP (Codeigniter) e JavaScript/HTML/CSS.",
+          "Design de banco de dados MySQL e MongoDB com Sequelize em Node.js.",
+          "Criação de módulo de ponto para a Continental AG eliminando processos manuais."
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Habilidades",
+    "categories": [
+      {
+        "label": "Frontend",
+        "items": ["Vue 3", "TypeScript", "JavaScript", "HTML", "CSS", "SASS", "Vuetify", "Pinia"]
+      },
+      {
+        "label": "Backend",
+        "items": ["Node.js", "Laravel", "Go", "PHP", "RabbitMQ", "Elasticsearch"]
+      },
+      {
+        "label": "Banco de Dados",
+        "items": ["MySQL", "MongoDB", "PostgreSQL"]
+      },
+      {
+        "label": "DevOps & Tools",
+        "items": ["Docker", "GCP", "Git", "GitLab", "Jira", "Notion"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projetos",
+    "coming_soon": "Em breve",
+    "coming_soon_desc": "Projetos pessoais serão adicionados em breve.",
+    "placeholder": "Projeto"
+  },
+  "education": {
+    "title": "Formação",
+    "items": [
+      {
+        "degree": "Bacharelado em Ciência da Computação",
+        "institution": "UTFPR — Universidade Tecnológica Federal do Paraná",
+        "period": "2019 – 2025 (Cursando)"
+      },
+      {
+        "degree": "Inglês Avançado",
+        "institution": "Escrito e oral · Experiência com empresas americanas",
+        "period": ""
+      },
+      {
+        "degree": "Iniciação Científica — CUDA & Autômatos Celulares em GPUs",
+        "institution": "UTFPR",
+        "period": "2020"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Vamos conversar?",
+    "subtitle": "Aberto a oportunidades, projetos e colaborações.",
+    "email_cta": "Enviar e-mail",
+    "or": "ou encontre-me em"
+  },
+  "footer": {
+    "made_with": "Feito com Next.js"
+  }
+}

@@ -1,0 +1,122 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: $nav-h;
+  transition: background $transition, backdrop-filter $transition, border-color $transition;
+
+  &.scrolled {
+    @include glass;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+.container {
+  @include flex-between;
+  @include container;
+  height: 100%;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  transition: color $transition;
+
+  &:hover { color: var(--accent); }
+}
+
+.dot { color: var(--accent); }
+
+.links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+
+  li button {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: color $transition;
+
+    &:hover { color: var(--text); }
+  }
+
+  @include mobile {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    inset: $nav-h 0 0 0;
+    background: var(--bg);
+    padding: 40px 24px;
+    gap: 24px;
+    align-items: flex-start;
+
+    &.open { display: flex; }
+
+    li button {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.langBtn, .themeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: $radius-sm;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  border: 1px solid var(--border);
+  transition: color $transition, border-color $transition, background $transition;
+
+  &:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: transform $transition, opacity $transition;
+  }
+
+  &.active {
+    span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    span:nth-child(2) { opacity: 0; }
+    span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  }
+
+  @include mobile { display: flex; }
+}

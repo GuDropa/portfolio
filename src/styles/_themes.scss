@@ -1,0 +1,24 @@
+@use 'variables' as *;
+
+:root,
+[data-theme='dark'] {
+  --bg:       #{$dark};
+  --surface:  #{$purple};
+  --text:     #{$light};
+  --accent:   #{$yellow};
+  --muted:    #{$muted};
+  --border:   rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(75, 36, 98, 0.35);
+  --node-glow: rgba(255, 214, 0, 0.4);
+}
+
+[data-theme='light'] {
+  --bg:       #{$light};
+  --surface:  #ffffff;
+  --text:     #{$dark};
+  --accent:   #{$purple};
+  --muted:    #{$muted};
+  --border:   rgba(26, 9, 51, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --node-glow: rgba(75, 36, 98, 0.3);
+}
