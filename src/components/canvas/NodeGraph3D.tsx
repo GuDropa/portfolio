@@ -6,32 +6,51 @@ import * as THREE from 'three';
 import styles from './NodeGraph3D.module.scss';
 
 const SKILL_NODES = [
-  { label: 'Vue 3', x: 0, y: 0.8, z: 0.2 },
-  { label: 'TypeScript', x: 1.4, y: 0.2, z: -0.3 },
-  { label: 'Node.js', x: -1.2, y: 0.4, z: 0.5 },
-  { label: 'MySQL', x: 0.6, y: -1.0, z: 0.1 },
-  { label: 'Docker', x: -0.8, y: -0.8, z: -0.4 },
-  { label: 'Go', x: 1.8, y: -0.5, z: 0.6 },
-  { label: 'GCP', x: -1.8, y: 0.1, z: -0.2 },
-  { label: 'Pinia', x: 0.3, y: 1.6, z: -0.5 },
-  { label: 'Laravel', x: -0.4, y: -1.5, z: 0.3 },
-  { label: 'MongoDB', x: 1.2, y: 1.0, z: 0.4 },
-  { label: 'RabbitMQ', x: -1.4, y: -0.3, z: 0.8 },
-  { label: 'SASS', x: 0.9, y: -0.2, z: -1.0 },
-  { label: 'Vuetify', x: -0.2, y: 0.5, z: 1.2 },
-  { label: 'Git', x: 1.6, y: 0.9, z: -0.7 },
-  { label: 'PHP', x: -0.9, y: 1.3, z: 0.1 },
+  // Core
+  { label: 'Vue 3',      x:  0.0, y:  0.8, z:  0.2 },
+  { label: 'React',      x:  1.6, y:  0.6, z: -0.2 },
+  { label: 'TypeScript', x:  1.4, y: -0.4, z:  0.5 },
+  { label: 'Node.js',    x: -1.2, y:  0.4, z:  0.5 },
+  { label: 'Next.js',    x:  0.5, y:  1.6, z: -0.4 },
+  // Frontend
+  { label: 'SASS',       x: -0.3, y: -0.6, z: -1.0 },
+  { label: 'Vuetify',    x: -0.2, y:  0.4, z:  1.2 },
+  { label: 'Pinia',      x:  0.8, y:  1.1, z:  0.6 },
+  { label: 'Zustand',    x:  2.0, y:  0.0, z:  0.3 },
+  { label: 'Framer',     x:  1.1, y: -1.1, z: -0.5 },
+  // Backend / DB
+  { label: 'MySQL',      x:  0.6, y: -1.2, z:  0.2 },
+  { label: 'MongoDB',    x:  1.2, y:  0.2, z:  1.1 },
+  { label: 'Go',         x:  1.8, y: -0.8, z:  0.7 },
+  { label: 'Laravel',    x: -0.4, y: -1.5, z:  0.4 },
+  { label: 'PHP',        x: -1.0, y:  1.3, z:  0.1 },
+  // DevOps / Tools
+  { label: 'Docker',     x: -0.8, y: -0.9, z: -0.4 },
+  { label: 'GCP',        x: -1.8, y:  0.1, z: -0.3 },
+  { label: 'Git',        x:  1.6, y:  1.1, z: -0.6 },
+  { label: 'RabbitMQ',   x: -1.4, y: -0.3, z:  0.9 },
+  { label: 'Vite',       x:  0.0, y: -1.8, z: -0.3 },
 ];
 
-const CONNECTIONS = [
-  [0, 1], [0, 2], [0, 7], [0, 12],
-  [1, 3], [1, 9], [1, 13],
-  [2, 5], [2, 10], [2, 8],
-  [3, 5], [3, 8],
-  [4, 6], [4, 10],
-  [5, 6], [6, 2],
-  [7, 12], [9, 13],
-  [11, 1], [14, 0],
+const CONNECTIONS: [number, number][] = [
+  // Vue ecosystem
+  [0, 6], [0, 7], [0, 4],
+  // React ecosystem
+  [1, 8], [1, 9], [1, 4],
+  // TS bridges Vue+React+Node
+  [2, 0], [2, 1], [2, 3],
+  // Node backend
+  [3, 10], [3, 11], [3, 18],
+  // Next
+  [4, 1], [4, 5],
+  // DB/backend
+  [10, 13], [11, 12], [12, 16],
+  // DevOps
+  [15, 16], [15, 3],
+  [17, 1], [17, 0],
+  // Build tools
+  [19, 9], [19, 1],
+  [14, 3], [13, 3],
 ];
 
 export function NodeGraph3D() {
@@ -53,15 +72,14 @@ export function NodeGraph3D() {
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 100);
-    camera.position.set(0, 0, 5);
+    camera.position.set(0, 0, 5.5);
 
     const getAccent = () => themeRef.current === 'light' ? 0x4B2462 : 0xFFD600;
-    const getEdge = () => themeRef.current === 'light' ? 0x4B2462 : 0xFFD600;
 
     // Nodes
     const nodeMeshes: THREE.Mesh[] = [];
     SKILL_NODES.forEach(({ x, y, z }) => {
-      const geo = new THREE.SphereGeometry(0.08, 16, 16);
+      const geo = new THREE.SphereGeometry(0.075, 16, 16);
       const mat = new THREE.MeshBasicMaterial({ color: getAccent() });
       const mesh = new THREE.Mesh(geo, mat);
       mesh.position.set(x, y, z);
@@ -69,15 +87,11 @@ export function NodeGraph3D() {
       nodeMeshes.push(mesh);
     });
 
-    // Glow rings around nodes
+    // Glow rings
     const glowMeshes: THREE.Mesh[] = [];
     SKILL_NODES.forEach(({ x, y, z }) => {
-      const geo = new THREE.SphereGeometry(0.14, 16, 16);
-      const mat = new THREE.MeshBasicMaterial({
-        color: getAccent(),
-        transparent: true,
-        opacity: 0.12,
-      });
+      const geo = new THREE.SphereGeometry(0.13, 16, 16);
+      const mat = new THREE.MeshBasicMaterial({ color: getAccent(), transparent: true, opacity: 0.1 });
       const mesh = new THREE.Mesh(geo, mat);
       mesh.position.set(x, y, z);
       scene.add(mesh);
@@ -87,18 +101,17 @@ export function NodeGraph3D() {
     // Edges
     const lineMats: THREE.LineBasicMaterial[] = [];
     CONNECTIONS.forEach(([a, b]) => {
-      const posA = SKILL_NODES[a];
-      const posB = SKILL_NODES[b];
+      const pa = SKILL_NODES[a]; const pb = SKILL_NODES[b];
       const geo = new THREE.BufferGeometry().setFromPoints([
-        new THREE.Vector3(posA.x, posA.y, posA.z),
-        new THREE.Vector3(posB.x, posB.y, posB.z),
+        new THREE.Vector3(pa.x, pa.y, pa.z),
+        new THREE.Vector3(pb.x, pb.y, pb.z),
       ]);
-      const mat = new THREE.LineBasicMaterial({ color: getEdge(), transparent: true, opacity: 0.2 });
+      const mat = new THREE.LineBasicMaterial({ color: getAccent(), transparent: true, opacity: 0.18 });
       lineMats.push(mat);
       scene.add(new THREE.Line(geo, mat));
     });
 
-    // Label elements
+    // Label DOM elements
     const labelEls: HTMLSpanElement[] = [];
     SKILL_NODES.forEach(({ label }) => {
       const el = document.createElement('span');
@@ -134,42 +147,35 @@ export function NodeGraph3D() {
       const v = pos.clone().project(camera);
       const w = canvas.width / window.devicePixelRatio;
       const h = canvas.height / window.devicePixelRatio;
-      return {
-        x: (v.x * 0.5 + 0.5) * w,
-        y: (-v.y * 0.5 + 0.5) * h,
-      };
+      return { x: (v.x * 0.5 + 0.5) * w, y: (-v.y * 0.5 + 0.5) * h };
     };
 
     const animate = () => {
       animId = requestAnimationFrame(animate);
       t += 0.004;
 
-      // Slow auto-rotation
-      scene.rotation.y = t * 0.5;
-      scene.rotation.x = Math.sin(t * 0.3) * 0.15;
+      scene.rotation.y = t * 0.45;
+      scene.rotation.x = Math.sin(t * 0.3) * 0.12;
 
-      // Mouse parallax
-      targetCam.x += (mouse.x * 0.6 - targetCam.x) * 0.05;
-      targetCam.y += (-mouse.y * 0.4 - targetCam.y) * 0.05;
+      targetCam.x += (mouse.x * 0.5 - targetCam.x) * 0.05;
+      targetCam.y += (-mouse.y * 0.35 - targetCam.y) * 0.05;
       camera.position.x = targetCam.x;
       camera.position.y = targetCam.y;
       camera.lookAt(scene.position);
 
-      // Update theme colors
       const accentHex = getAccent();
       nodeMeshes.forEach(m => (m.material as THREE.MeshBasicMaterial).color.setHex(accentHex));
       glowMeshes.forEach(m => (m.material as THREE.MeshBasicMaterial).color.setHex(accentHex));
-      lineMats.forEach(m => m.color.setHex(getEdge()));
+      lineMats.forEach(m => m.color.setHex(accentHex));
 
       renderer.render(scene, camera);
 
-      // Sync label positions
       nodeMeshes.forEach((mesh, i) => {
         const worldPos = mesh.getWorldPosition(new THREE.Vector3());
         const screen = projectToScreen(worldPos);
         const el = labelEls[i];
         el.style.left = `${screen.x}px`;
-        el.style.top = `${screen.y - 18}px`;
+        el.style.top  = `${screen.y - 16}px`;
       });
     };
 

@@ -18,7 +18,10 @@
   },
   "about": {
     "title": "About me",
-    "text": "Fullstack Developer with 4+ years of experience and co-founder of FiqOn, specialized in Vue.js, TypeScript and Node.js. Experienced in leading product teams, improving usability and implementing scalable microservices. Proficient in agile methodologies and project management, with a continuous focus on performance, accessibility and user experience."
+    "text": "Fullstack Developer with 4+ years of experience and co-founder of FiqOn, specialized in Vue.js, TypeScript and Node.js. Experienced in leading product teams, improving usability and implementing scalable microservices. Proficient in agile methodologies and project management, with a continuous focus on performance, accessibility and user experience.",
+    "stat_years_label": "Years of experience",
+    "stat_raised_label": "Raised — FiqOn",
+    "stat_companies_label": "Companies served"
   },
   "experience": {
     "title": "Experience",
@@ -94,7 +97,7 @@
     "categories": [
       {
         "label": "Frontend",
-        "items": ["Vue 3", "TypeScript", "JavaScript", "HTML", "CSS", "SASS", "Vuetify", "Pinia"]
+        "items": ["Vue 3", "React", "Next.js", "TypeScript", "JavaScript", "SASS", "Vuetify", "Pinia", "Zustand", "Framer Motion", "Vite", "Tailwind"]
       },
       {
         "label": "Backend",
