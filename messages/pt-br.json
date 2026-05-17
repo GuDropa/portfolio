@@ -112,9 +112,31 @@
   },
   "projects": {
     "title": "Projetos",
-    "coming_soon": "Em breve",
-    "coming_soon_desc": "Projetos pessoais serão adicionados em breve.",
-    "placeholder": "Projeto"
+    "view_code": "Ver código",
+    "view_live": "Ver live",
+    "items": [
+      {
+        "name": "Conta Ponto",
+        "description": "App que recebe fotos do cartão de ponto e gera relatório mensal de horas trabalhadas usando OCR e IA (Claude + Gemini).",
+        "tags": ["Next.js", "TypeScript", "Claude API", "OCR", "AI"],
+        "github": "https://github.com/GuDropa/conta-ponto",
+        "live": "https://conta-ponto.vercel.app"
+      },
+      {
+        "name": "Agenda Barber",
+        "description": "Sistema de agendamento para barbearia com formulários validados, seleção de datas e temas dark/light.",
+        "tags": ["Next.js", "TypeScript", "shadcn", "Zod", "React Hook Form"],
+        "github": "https://github.com/GuDropa/agenda-barber",
+        "live": "https://agenda-barber-self.vercel.app"
+      },
+      {
+        "name": "Quiz Olfativo",
+        "description": "Quiz interativo de assinatura olfativa para indicação de perfumes a indecisos. Animações com Framer Motion.",
+        "tags": ["React", "Vite", "TypeScript", "Framer Motion", "Tailwind"],
+        "github": "https://github.com/GuDropa/quiz-assinatura-olfativa",
+        "live": "https://quiz-assinatura-olfativa.vercel.app"
+      }
+    ]
   },
   "education": {
     "title": "Formação",

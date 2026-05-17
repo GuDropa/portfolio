@@ -112,9 +112,31 @@
   },
   "projects": {
     "title": "Projects",
-    "coming_soon": "Coming soon",
-    "coming_soon_desc": "Personal projects will be added soon.",
-    "placeholder": "Project"
+    "view_code": "View code",
+    "view_live": "View live",
+    "items": [
+      {
+        "name": "Conta Ponto",
+        "description": "App that receives timecard photos and generates monthly work-hours reports using OCR and AI (Claude + Gemini).",
+        "tags": ["Next.js", "TypeScript", "Claude API", "OCR", "AI"],
+        "github": "https://github.com/GuDropa/conta-ponto",
+        "live": "https://conta-ponto.vercel.app"
+      },
+      {
+        "name": "Agenda Barber",
+        "description": "Barber scheduling system with validated forms, date selection, and dark/light theme support.",
+        "tags": ["Next.js", "TypeScript", "shadcn", "Zod", "React Hook Form"],
+        "github": "https://github.com/GuDropa/agenda-barber",
+        "live": "https://agenda-barber-self.vercel.app"
+      },
+      {
+        "name": "Olfactory Quiz",
+        "description": "Interactive fragrance signature quiz to help undecided users find the right perfume. Animated with Framer Motion.",
+        "tags": ["React", "Vite", "TypeScript", "Framer Motion", "Tailwind"],
+        "github": "https://github.com/GuDropa/quiz-assinatura-olfativa",
+        "live": "https://quiz-assinatura-olfativa.vercel.app"
+      }
+    ]
   },
   "education": {
     "title": "Education",

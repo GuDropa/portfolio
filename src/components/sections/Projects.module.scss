@@ -29,12 +29,6 @@
   margin-top: 8px;
 }
 
-.subtitle {
-  font-size: 0.9rem;
-  color: var(--muted);
-  margin-top: 8px;
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -54,11 +48,12 @@
   border: 1px solid var(--border);
   border-radius: $radius-md;
   overflow: hidden;
-  transition: border-color $transition, transform $transition;
+  transition: border-color $transition, transform $transition, box-shadow $transition;
 
   &:hover {
     border-color: var(--accent);
-    transform: translateY(-4px);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 
     .corner { opacity: 1; }
   }
@@ -72,40 +67,71 @@
   height: 40px;
   background: var(--accent);
   clip-path: polygon(100% 0, 0 0, 100% 100%);
-  opacity: 0.6;
+  opacity: 0.5;
   transition: opacity $transition;
 }
 
 .cardInner {
-  padding: 32px 28px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.placeholder {
-  @include flex-center;
-  height: 120px;
-  border-radius: $radius-sm;
-  border: 1px dashed var(--border);
-  margin-bottom: 24px;
-
-  span {
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
+.cardTop {
+  @include flex-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
 .projectName {
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 700;
   color: var(--text);
+  flex: 1;
+}
+
+.links {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 5px 10px;
+  border-radius: $radius-sm;
+  white-space: nowrap;
+  transition: color $transition, border-color $transition;
+
+  &:hover {
+    color: var(--text);
+    border-color: var(--text);
+  }
+
+  &.linkAccent {
+    color: var(--accent);
+    border-color: var(--accent);
+    opacity: 0.85;
+
+    &:hover { opacity: 1; }
+  }
 }
 
 .projectDesc {
   font-size: 0.875rem;
+  line-height: 1.65;
   color: var(--muted);
-  margin-top: 8px;
-  min-height: 40px;
+  flex: 1;
 }
 
 .tags {
@@ -116,7 +142,7 @@
 }
 
 .tagPill {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   padding: 4px 10px;
@@ -124,4 +150,9 @@
   border: 1px solid var(--border);
   color: var(--muted);
   text-transform: uppercase;
+  transition: border-color $transition, color $transition;
+
+  .card:hover & {
+    border-color: rgba(255, 214, 0, 0.2);
+  }
 }
