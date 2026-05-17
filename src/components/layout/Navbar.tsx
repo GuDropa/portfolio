@@ -2,7 +2,7 @@
 
 import { useTheme } from 'next-themes';
 import { useTranslations, useLocale } from 'next-intl';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname, useRouter } from '@/i18n/navigation';
 import { useState, useEffect } from 'react';
 import styles from './Navbar.module.scss';
 
@@ -28,9 +28,7 @@ export function Navbar() {
 
   const toggleLang = () => {
     const next = locale === 'pt-br' ? 'en' : 'pt-br';
-    const segments = pathname.split('/');
-    segments[1] = next;
-    router.push(segments.join('/'));
+    router.replace(pathname, { locale: next });
   };
 
   const scrollTo = (id: string) => {
