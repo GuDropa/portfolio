@@ -59,7 +59,7 @@ export function About() {
 
               <div className={styles.stats}>
                 <div className={styles.stat}>
-                  <strong>4+</strong>
+                  <strong>5+</strong>
                   <span>{t('stat_years_label')}</span>
                 </div>
                 <div className={styles.stat}>
@@ -67,7 +67,7 @@ export function About() {
                   <span>{t('stat_raised_label')}</span>
                 </div>
                 <div className={styles.stat}>
-                  <strong>5+</strong>
+                  <strong>10+</strong>
                   <span>{t('stat_companies_label')}</span>
                 </div>
               </div>

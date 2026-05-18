@@ -11,14 +11,14 @@
     "greeting": "Olá, eu sou",
     "name": "Gustavo Dropa",
     "title": "Desenvolvedor Fullstack",
-    "subtitle": "Co-fundador da FiqOn · Vue.js · TypeScript · Node.js",
+    "subtitle": "Software Engineer na Myrp · PHP · Vue.js · TypeScript",
     "cta_github": "Ver GitHub",
     "cta_contact": "Entrar em contato",
     "cta_cv": "Download CV"
   },
   "about": {
     "title": "Sobre mim",
-    "text": "Desenvolvedor Fullstack com mais de 4 anos de experiência e co-fundador da startup FiqOn, especializado em Vue.js, TypeScript e Node.js. Tenho experiência em liderança de equipes de produto, melhoria de usabilidade e implementação de microsserviços escaláveis. Proficiente em metodologias ágeis e gestão de projetos, com foco contínuo em performance, acessibilidade e experiência do usuário.",
+    "text": "Desenvolvedor Fullstack com mais de 5 anos de experiência. Atualmente Software Engineer na Myrp, com histórico como co-fundador e Tech Lead na startup FiqOn. Especializado em PHP/Laravel e Node.js no backend e Vue.js/TypeScript no frontend. Experiência em ambientes de alta responsabilidade, liderança técnica, arquitetura de sistemas e entrega de produtos escaláveis.",
     "stat_years_label": "Anos de experiência",
     "stat_raised_label": "Captado — FiqOn",
     "stat_companies_label": "Empresas atendidas"
@@ -28,66 +28,43 @@
     "present": "Atualmente",
     "roles": [
       {
-        "title": "Desenvolvedor Front-End Pleno",
+        "title": "Software Engineer",
         "company": "Myrp",
         "location": "Blumenau, SC",
         "period": "Out 2024 – Atualmente",
         "team": "Time de Desenvolvimento Enterprise",
         "bullets": [
-          "Desenvolvimento de serviços Micro Frontend em Vue (versões 2 e 3).",
-          "Manutenção e novas funcionalidades de sistemas legados em CSHTML, JQuery, Knockout e Vanilla JS.",
-          "Contato recorrente com o time de produto para alinhamento assertivo de demandas Enterprise.",
+          "Desenvolvimento de PDV Mobile com arquitetura Offline-First para operação sem internet.",
+          "Implementação de conformidade fiscal: NFe, NFCe, NFCom e NFSe.",
+          "Integração de SSO com Keycloak para autenticação unificada entre sistemas.",
+          "Modernização de legados CSHTML/Knockout.js para Vue 3 com Pug e Vuetify.",
           "Metodologia Scrum com alinhamentos semanais e reuniões diárias."
         ]
       },
       {
-        "title": "Dev Front-End Pleno · Co-Founder",
+        "title": "Co-fundador · Tech Lead & Desenvolvedor Full Stack",
         "company": "FiqOn",
         "location": "Ponta Grossa, PR",
-        "period": "Mar 2024 – Out 2024",
-        "team": "Time de Desenvolvimento",
+        "period": "Set 2021 – Out 2024",
+        "team": "Time Fundador",
         "bullets": [
-          "Desenvolvimento de SPAs em Vue 3 com TypeScript, SASS e Vuetify.",
-          "Consumo de APIs REST, WebSocket e gerenciamento de estados com Pinia.",
-          "Desenvolvimento backend com Laravel e Go, usando RabbitMQ, Elasticsearch, MySQL, MongoDB, Docker e GCP.",
-          "Participação em validações técnicas e definição de prazos/metas."
+          "Arquitetura e desenvolvimento do backend em PHP/Laravel e Node.js para plataforma de integração no-code.",
+          "Desenvolvimento do frontend no-code com Vue.js e VueFlow (editor de fluxo visual).",
+          "DevOps: infraestrutura em GCP, Docker, RabbitMQ e microsserviços em Go.",
+          "Liderança técnica: code reviews, padrões de qualidade e mentoria do time.",
+          "Membro do time fundador que captou aporte de R$3 milhões via investidor anjo."
         ]
       },
       {
-        "title": "Head de Produto",
-        "company": "FiqOn",
-        "location": "Ponta Grossa, PR",
-        "period": "Fev 2023 – Mar 2024",
-        "team": "Time de Produto",
-        "bullets": [
-          "Planejamento da refatoração da plataforma com foco em usabilidade e estratégia PLG.",
-          "Estudo de concorrentes e levantamento de requisitos com empresas americanas (inglês avançado).",
-          "Colaboração com times internacionais para identificar tendências de mercado.",
-          "Aumento de 40% na velocidade de desenvolvimento ao ajustar a metodologia ágil."
-        ]
-      },
-      {
-        "title": "Desenvolvedor Front-End",
-        "company": "FiqOn",
-        "location": "Ponta Grossa, PR",
-        "period": "Set 2021 – Fev 2023",
-        "team": "Time de Desenvolvimento",
-        "bullets": [
-          "Co-Fundador: planejei e desenvolvi a estrutura inicial do front da plataforma de integração.",
-          "Desenvolvimento em Vue 2 e JavaScript com Bootstrap e SASS.",
-          "Participação no time fundador da startup, que recebeu aporte de R$3 milhões via investidor anjo."
-        ]
-      },
-      {
-        "title": "Desenvolvedor Fullstack",
+        "title": "Desenvolvedor Full Stack",
         "company": "Finer",
         "location": "Ponta Grossa, PR",
         "period": "Mar 2021 – Set 2021",
-        "team": "Time de projetos personalizados",
+        "team": "Time de Projetos Personalizados",
         "bullets": [
-          "Desenvolvimento fullstack com PHP (Codeigniter) e JavaScript/HTML/CSS.",
+          "Desenvolvimento fullstack com PHP (Codeigniter) e Vue 2.",
           "Design de banco de dados MySQL e MongoDB com Sequelize em Node.js.",
-          "Criação de módulo de ponto para a Continental AG eliminando processos manuais."
+          "Criação de módulo de ponto eletrônico para a Continental AG, eliminando processos manuais."
         ]
       }
     ]
@@ -147,7 +124,7 @@
       {
         "degree": "Bacharelado em Ciência da Computação",
         "institution": "UTFPR — Universidade Tecnológica Federal do Paraná",
-        "period": "2019 – 2025 (Cursando)"
+        "period": "2019 – 2026 (Cursando)"
       },
       {
         "degree": "Inglês Avançado",

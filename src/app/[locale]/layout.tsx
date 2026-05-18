@@ -1,10 +1,9 @@
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import { ThemeProvider } from '@/components/providers/ThemeProvider';
-import '@/app/globals.scss';
+import { LocaleHtml } from '@/components/providers/LocaleHtml';
 
 export const metadata: Metadata = {
   title: 'Gustavo Dropa — Fullstack Developer',
@@ -23,17 +22,13 @@ export default async function LocaleLayout({ children, params }: Props) {
     notFound();
   }
 
+  setRequestLocale(locale);
   const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body>
-        <ThemeProvider>
-          <NextIntlClientProvider messages={messages}>
-            {children}
-          </NextIntlClientProvider>
-        </ThemeProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider key={locale} locale={locale} messages={messages}>
+      <LocaleHtml locale={locale} />
+      {children}
+    </NextIntlClientProvider>
   );
 }

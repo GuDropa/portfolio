@@ -16,7 +16,7 @@ const SKILL_NODES: { label: string; icon: string; x: number; y: number; z: numbe
   { label: 'Next.js',    icon: `${DEVICON}/nextjs/nextjs-original.svg`,            x:  0.5, y:  1.6, z: -0.4 },
   { label: 'SASS',       icon: `${DEVICON}/sass/sass-original.svg`,                x: -0.3, y: -0.6, z: -1.0 },
   { label: 'Vuetify',    icon: `${DEVICON}/vuetify/vuetify-original.svg`,          x: -0.2, y:  0.4, z:  1.2 },
-  { label: 'Pinia',      icon: `${DEVICON}/pinia/pinia-original.svg`,              x:  0.8, y:  1.1, z:  0.6 },
+  { label: 'Pinia',      icon: `${SIMPLE}/pinia/42B883`,                           x:  0.8, y:  1.1, z:  0.6 },
   { label: 'Zustand',    icon: `${DEVICON}/react/react-original.svg`,              x:  2.0, y:  0.0, z:  0.3 },
   { label: 'Framer',     icon: `${SIMPLE}/framer/05F`,                             x:  1.1, y: -1.1, z: -0.5 },
   { label: 'MySQL',      icon: `${DEVICON}/mysql/mysql-original.svg`,              x:  0.6, y: -1.2, z:  0.2 },
@@ -29,6 +29,10 @@ const SKILL_NODES: { label: string; icon: string; x: number; y: number; z: numbe
   { label: 'Git',        icon: `${DEVICON}/git/git-original.svg`,                  x:  1.6, y:  1.1, z: -0.6 },
   { label: 'RabbitMQ',   icon: `${SIMPLE}/rabbitmq/FF6600`,                        x: -1.4, y: -0.3, z:  0.9 },
   { label: 'Vite',       icon: `${DEVICON}/vitejs/vitejs-original.svg`,            x:  0.0, y: -1.8, z: -0.3 },
+  { label: 'Angular',    icon: `${DEVICON}/angular/angular-original.svg`,          x: -0.6, y:  1.9, z: -0.5 },
+  { label: 'Oracle',     icon: `${DEVICON}/oracle/oracle-original.svg`,            x:  0.4, y: -0.9, z:  1.5 },
+  { label: 'Java',       icon: `${DEVICON}/java/java-original.svg`,                x: -1.7, y: -1.1, z:  0.3 },
+  { label: 'SQL Server', icon: `${DEVICON}/microsoftsqlserver/microsoftsqlserver-plain.svg`, x:  1.1, y: -1.6, z: -0.7 },
 ];
 
 const CONNECTIONS: [number, number][] = [
@@ -42,6 +46,10 @@ const CONNECTIONS: [number, number][] = [
   [17, 1],[17, 0],
   [19, 9],[19, 1],
   [14, 3],[13, 3],
+  [20, 2],[20,14],
+  [21,10],[21, 3],
+  [22,15],[22,16],
+  [23,21],[23,10],
 ];
 
 export function NodeGraph3D() {
