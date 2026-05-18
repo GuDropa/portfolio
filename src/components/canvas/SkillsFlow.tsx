@@ -197,7 +197,13 @@ function SkillNodeComp({ data }: { data: { label: string; icon?: string; color: 
         style={{ '--node-color': data.color } as React.CSSProperties}
       >
         {data.icon
-          ? <img src={data.icon} alt={data.label} className={styles.skillIcon} crossOrigin="anonymous" />
+          ? <img
+              src={data.icon}
+              alt={data.label}
+              className={styles.skillIcon}
+              crossOrigin="anonymous"
+              onError={(e) => { e.currentTarget.style.display = 'none'; }}
+            />
           : <span className={styles.skillFallback}>{data.label.slice(0, 3).toUpperCase()}</span>
         }
       </div>
