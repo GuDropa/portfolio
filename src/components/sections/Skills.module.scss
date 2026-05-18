@@ -32,12 +32,4 @@
 
 .graphWrapper {
   width: 100%;
-  height: 500px;
-  border-radius: $radius-lg;
-  border: 1px solid var(--border);
-  overflow: hidden;
-
-  @include mobile {
-    height: 380px;
-  }
 }
