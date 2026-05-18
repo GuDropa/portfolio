@@ -40,7 +40,7 @@ const ICON_MAP: Record<string, string> = {
   'Notion':        `${SIMPLE}/notion/000000`,
   'Vue 3':         `${DEVICON}/vuejs/vuejs-original.svg`,
   'Vuetify':       `${DEVICON}/vuetify/vuetify-original.svg`,
-  'Pinia':         `${DEVICON}/pinia/pinia-original.svg`,
+  'Pinia':         `${SIMPLE}/pinia/42B883`,
   'Laravel':       `${DEVICON}/laravel/laravel-original.svg`,
   'Go':            `${DEVICON}/go/go-original-wordmark.svg`,
   'Elasticsearch': `${DEVICON}/elasticsearch/elasticsearch-original.svg`,
