@@ -128,7 +128,7 @@ export function Projects() {
                     <div className={styles.impactSection}>
                       {project.impact && (
                         <p className={styles.impact}>
-                          <strong>Impact:</strong> {project.impact}
+                          <strong>{t('impact')}:</strong> {project.impact}
                         </p>
                       )}
                       {project.metrics && (
